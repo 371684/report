@@ -1,0 +1,5 @@
+\frametitle{附注}
+^^I\begin{itemize}
+^^I^^I\item 填充直方图的权重$2\pi \rd y$在直方图相除时可以消掉.
+^^I^^I\item 分支比在直方图相除时可以消掉, 不会影响$R_{AA}$
+^^I\end{itemize}

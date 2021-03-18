@@ -1,0 +1,67 @@
+\documentclass{beamer}
+\usepackage{bookmark}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{multirow}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{etoolbox}
+\usepackage{diagbox}
+\usepackage{listings}
+% This is the file main.tex
+\usetheme{Warsaw}
+\setbeamertemplate{theorems}[numbered]
+\title{Title}
+\subtitle{subtitle}
+\author{Author}
+\institute{
+	Univ. of Sci. \& Tech. of China
+}
+\date{\today}
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	\begin{frame}
+		\tableofcontents
+	\end{frame}
+\section{Introduction}
+\subsection{Background}
+\begin{frame}{Individual Causal Effect}
+	Individual causal effects are defined as a contrast of the values of
+	counterfactual outcomes. 
+\begin{block}{Counterfactual outcome}
+	Such as $Y^{a=1}$ and $Y^{a=0}$, which may not actually ((occur. 
+	
+	Only one of those outcomes is observed for each individual, and all
+	other counterfactual outcomes remain unobserved.
+\end{block}
+	This paper only considers Neyman's model where each subject has only two potential responses.
+	\end{frame}
+\begin{frame}{Average Causal Effect}
+	
+	\begin{block}{The intention-to-treat parameter ($b_{ITT}$)}
+			$b_{ITT}$ is the average response if all subjects are assigned to treatment, minus the average response if all subjects are assigned to control.
+		\end{block}
+	 
+	  Sometimes $b_{ITT}$ is called the average causal effect or the average treatment effect. 
+	  \begin{block}{Remark}
+	  	$b_{ITT}$ needs to be estimated!
+	  \end{block}
+\end{frame}
+\begin{frame}{Untenable Model Asumptions}
+	\begin{itemize}
+		\item In randomized or obeserved experiments for causal inference, data are often analyzed using regression models. 
+		\begin{equation*}
+		\end{equation*}
+		\item Regression model needs its assumptions but randomization does not justify regression models. 
+		
+		In fact the assignment variable (to treatment or control) and the error term in the model will generally be strongly related.
+		\begin{equation*}
+		\end{equation*}
+		\item Wrong model assumptions usually bring wrong conlusions!
+	\end{itemize}
+\end{frame}
+\end{document}

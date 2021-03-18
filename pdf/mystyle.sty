@@ -1,0 +1,397 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mystyle}
+\RequirePackage{amsmath}
+\RequirePackage{siunitx}
+\RequirePackage{esint}
+
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+\RequirePackage{mathrsfs}
+\RequirePackage{enumitem}
+\RequirePackage{xcolor}
+\RequirePackage{physics}
+\RequirePackage{extarrows}
+\RequirePackage{etoolbox}
+\RequirePackage{tcolorbox}
+
+\newenvironment{curbarray}[1]{\left\{ \begin{array}{#1}}{\end{array}\right.}
+\renewcommand{\mod}{~\text{mod}~}
+\newcommand{\conclumath}[1]{\tcboxmath[colback=white, boxrule=.3pt, sharp corners=all]{#1}}
+
+
+
+
+
+
+
+\newcommand{\fcavity}{{\normalfont\the\thm@headfont\thm@indent\@ifempty {}{\let \thmnote \@gobble }{\let \thmnote \@iden }\thm@swap\swappedhead\thmhead{\csname thmname@\@currenvir\endcsname}{\csname the\@currenvir\endcsname}{}\the\thm@headpunct\thmheadnl\hskip\thm@headsep\ignorespaces}\ignorespaces}
+\newcommand{\makecavity}[4]{\leavevmode \InsertBoxR{#1}{\parbox{#2}{#3}}[1]\vspace*{-\baselineskip}
+\noindent\hphantom{\fcavity}#4\leavevmode
+}
+
+% math abbr
+
+\newcommand{\idex}[2]{\brac{#1:#2}}
+\newcommand{\pare}[1]{\left(#1\right)}
+\newcommand{\blr}[1]{\left[#1\right)}
+\newcommand{\lbr}[1]{\left(#1\right]}
+\newcommand{\brac}[1]{\left[#1\right]}
+\newcommand{\curb}[1]{\left\{#1\right\}}
+\newcommand{\rec}[1]{\frac{1}{#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\bH}{\mathbb{H}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\unk}{\mathcal{X}}
+\newcommand{\parallelsum}{\mathbin{\!/\mkern-5mu/\!}}
+
+% the following two commands are not used by default
+% saved for future use
+%\def\<#1/{\mathcal{#1}}
+%\def\?#1/{\mathscr{#1}}
+
+% math abbr ends
+
+% phy abbr
+
+\newcommand{\ddel}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\ddelon}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dddel}[1]{\frac{\partial^2}{\partial^2 #1}}
+\newcommand{\dddelon}[2]{\frac{\partial^2 #1}{\partial #2 ^2}}
+\newcommand{\ddt}{\ddel{t}}
+\newcommand{\ddT}{\ddel{T}}
+\newcommand{\ddV}{\ddel{V}}
+\newcommand{\ddr}{\ddel{r}}
+\newcommand{\dds}{\ddel{s}}
+\newcommand{\ddron}[1]{\ddelon{#1}{r}}
+\newcommand{\ddson}[1]{\ddelon{#1}{s}}
+\newcommand{\ddton}[1]{\ddelon{#1}{t}}
+\newcommand{\ddxon}[1]{\ddelon{#1}{x}}
+\newcommand{\ddyon}[1]{\ddelon{#1}{y}}
+\newcommand{\ddzon}[1]{\ddelon{#1}{z}}
+\newcommand{\ddthon}[1]{\ddelon{#1}{\theta}}
+\newcommand{\ddalon}[1]{\ddelon{#1}{\alpha}}
+\newcommand{\ddth}{\ddel{\theta}}
+\newcommand{\ddph}{\ddel{\phi}}
+\newcommand{\dddt}{\dddel{t}}
+\newcommand{\dddr}{\dddel{t}}
+\newcommand{\dddth}{\dddel{\theta}}
+\newcommand{\dddph}{\dddel{\phi}}
+\newcommand{\rd}[1]{\mathrm{d} #1}
+\newcommand{\dt}{\rd{t}}
+\newcommand{\dy}{\rd{y}}
+\newcommand{\dx}{\rd{x}}
+\newcommand{\edd}[1]{\frac{\mathrm{d}}{\mathrm{d} #1}}
+\newcommand{\eddd}[1]{\frac{\mathrm{d}^2}{\mathrm{d} #1^2}}
+\newcommand{\eddon}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\edddon}[2]{\frac{\mathrm{d}^2 #1}{\mathrm{d} #2^2}}
+\newcommand{\edt}{\edd{t}}
+\newcommand{\edton}[1]{\eddon{#1}{t}}
+\newcommand{\edxon}[1]{\eddon{#1}{x}}
+\newcommand{\edalon}[1]{\eddon{#1}{\alpha}}
+\newcommand{\edT}{\edd{T}}
+\newcommand{\edr}{\edd{r}}
+\newcommand{\edl}{\edd{l}}
+\newcommand{\edx}{\edd{x}}
+\newcommand{\edth}{\edd{\theta}}
+\newcommand{\eddton}[1]{\edddon{#1}{t}}
+\newcommand{\eddzon}[1]{\edddon{#1}{z}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\alp}{\frac{1}{\sqrt{2}}}
+\newcommand{\alpi}{\frac{i}{\sqrt{2}}}
+\newcommand{\expc}[1]{\left\langle#1\right\rangle}
+\newcommand{\bkn}[1]{\bra{#1}\ket{#1}}
+\newcommand{\bk}[2]{\bra{#1}\ket{#2}}
+\newcommand{\bik}[3]{\bra{#1} #2 \ket{#3}}
+\newcommand{\vari}[1]{\sigma_{#1}}
+\newcommand{\intc}[2]{\left[#1, #2\right]}
+\newcommand{\sch}{Schr\"{o}dinger}
+\newcommand{\moment}{\boldsymbol{p}}
+\newcommand{\coor}{\boldsymbol{x}}
+\newcommand{\lapc}{\nabla^2}
+
+\newcommand{\thalf}{\frac{3}{2}}
+\newcommand{\rot}{\nabla\times}
+\newcommand{\divg}{\nabla\cdot}
+\newcommand{\wegs}{\wedge\cdots\wedge}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\conclu}[1]{\vspace{1em}\par\noindent\fbox{\parbox{0.97\linewidth}{#1}}\vspace{1em}}
+\newcommand{\subentrynote}{$\bullet$}
+\newcommand{\keypoint}[1]{\par\begin{siderules}\subentrynote\quad #1 \end{siderules}\par}
+\newcommand{\fconclu}{\boxed}
+\newcommand{\pair}[2]{#1 \, #2}
+\newcommand{\barbelow}[1]{\underline{#1}}
+\newcommand{\intn}[2]{\int #1 \,\mathrm{d} #2}
+\newcommand{\intu}[3]{\int_0^{#1} #2 \,\mathrm{d} #3}
+\newcommand{\intiu}[3]{\int_{-\infty}^{#1} #2 \, \rd{} #3}
+\newcommand{\intui}[2]{\int_0^{\infty} #1 \,\mathrm{d} #2}
+\newcommand{\intii}[2]{\int_{-\infty}^{\infty} #1 \,\mathrm{d} #2}
+\newcommand{\intt}[2]{\int_0^\infty #1 \, \rd{} #2}
+\newcommand{\intr}[2]{\int_{-\infty}^{\infty} #1 \, \rd{} #2}
+\newcommand{\intbi}[3]{\int_{#1}^{\infty} #2 \, \rd{} #3}
+%\newcommand{\intab}[4]{\int_{#1}^{#2} #3 \, \rd{} #4}
+%a test for variable parameters
+\let\bgroup={
+\newcommand{\intab@helper@i}[2]{\int_{a}^{b} #1 \, \rd{} #2}
+\newcommand{\intab@helper@ii}[4]{\int_{#1}^{#2} #3 \, \rd{} #4}
+\newcommand{\intab}[2]{%
+\@ifnextchar\bgroup%
+  {\intab@helper@ii{#1}{#2}}%
+  {\intab@helper@i{#1}{#2}}%
+}
+%end test
+\newcommand{\supint}[2]{\overbar{\int_{#1}^{#2}}}
+\newcommand{\infint}[2]{\barbelow{\int_{#1}^{#2}}}
+\newcommand{\supdb}{\overbar{\int}}
+\newcommand{\infdb}{\barbelow{\int}}
+\newcommand{\intpostf}[1]{\, \rd{} #1}
+\newcommand{\bfactor}[1]{e^{-#1/k_BT}}
+\newcommand{\pbfactor}[1]{e^{#1/k_BT}}
+\newcommand{\dn}[2]{#1^{\pare{#2}}}
+\newcommand{\prodg}[1]{\pare{#1}^\times}
+\newcommand{\muc}{S_\Omega}
+\newcommand{\otw}{\, || \,}
+\newcommand{\externalF}{\vF^{\pare{e}}}
+\newcommand{\appliedF}{\vF^{\pare{a}}}
+\newcommand{\externalN}{\vN^{\pare{e}}}
+
+\newcommand{\notion}{\emph}
+\newcommand{\iP}{\mathcal{P}}
+\newcommand{\eiP}{e^{-\iP}}
+\newcommand{\iF}{\mathcal{F}}
+\newcommand{\eiF}{e^{-\iF}}
+\newcommand{\iG}{\mathcal{G}}
+
+\newcommand{\rc}{r\cos\theta}
+\newcommand{\rs}{r\sin\theta}
+\newcommand{\sn}{\mathrm{sn}}
+\newcommand{\cn}{\mathrm{cn}}
+\newcommand{\rdn}{\mathrm{dn}}
+
+\newcommand{\hankel}{H_p^{\pare{1}}}
+\newcommand{\hankell}{H_p^{\pare{2}}}
+\newcommand{\hhankel}{H_n^{\pare{1}}}
+\newcommand{\hhankell}{H_n^{\pare{2}}}
+\newcommand{\ber}{\text{ber}\,}
+\newcommand{\bei}{\text{bei}\,}
+\newcommand{\kker}{\text{ker}\,}
+\newcommand{\kei}{\text{kei}\,}
+\newcommand{\Ai}{\text{Ai}}
+\newcommand{\Bi}{\text{Bi}}
+
+\newcommand{\re}{\text{Re}\,}
+
+\newcommand{\Fp}{F_\phi}
+\newcommand{\Ep}{E_\phi}
+\newcommand{\Fx}{F_x}
+\newcommand{\FF}{\mathbf{F}}
+\newcommand{\Ex}{E_x}
+
+\newcommand{\isom}{\overset{\sim}{=}}
+\newcommand{\defas}{\xlongequal{\text{def}}}
+\newcommand{\diam}{\mathrm{diam}\,}
+\newcommand{\ord}[1]{\abs{#1}}
+\newcommand{\sbm}[1]{\overbar{#1}}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\restr}[2]{#1|_{#2}}
+\newcommand{\divs}{|}
+\newcommand{\ndivs}{\nmid}
+\newcommand{\modeq}[1]{\overbar{#1}}
+\newcommand{\ggen}[1]{\langle#1\rangle}
+\newcommand{\ggencond}{\braket}
+\newcommand{\suchthat}{\ \text{s.t.}\ }
+\newcommand{\rsag}{\overrightarrow}
+
+\newcommand{\func}[3]{#1:\, #2 \rightarrow #3}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\clo}[1]{\overbar{#1}}
+\newcommand{\ecls}[1]{\overbar{#1}}
+\newcommand{\conj}[1]{\overbar{#1}}
+\newcommand{\supi}[2]{\overbar{\int_{#1}^{#2}}}
+\newcommand{\infi}[2]{\underbar{\int_{#1}^{#2}}}
+\newcommand{\setf}{\mathscr}
+\newcommand{\bool}{\mathrm{bool}}
+\newcommand{\inc}{++}
+\newcommand{\defeq}{:=}
+\newcommand{\card}[1]{\#\pare{#1}}
+\newcommand{\setcond}[2]{\curb{#1 \, \left| \, #2 \right.}}
+\newcommand{\setcondl}[2]{\curb{\left. #1 \, \right| \, #2}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\bfa}{\bv{a}}
+\newcommand{\bfb}{\bv{b}}
+\newcommand{\bfx}{\bv{x}}
+\newcommand{\bfy}{\bv{y}}
+\newcommand{\bfe}{\bv{e}}
+\newcommand{\bfF}{\bv{F}}
+\newcommand{\bff}{\bv{f}}
+\newcommand{\bfG}{\bv{G}}
+\newcommand{\bfH}{\bv{H}}
+\newcommand{\bfg}{\bv{g}}
+\newcommand{\bfh}{\bv{h}}
+\newcommand{\bfr}{\bv{r}}
+\newcommand{\bfk}{\bv{k}}
+\newcommand{\bfu}{\bv{u}}
+\newcommand{\bfv}{\bv{v}}
+\newcommand{\oo}[1]{o\pare{#1}}
+\newcommand{\OO}[1]{O\pare{#1}}
+% \newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\DD}{\mathbf{D}}
+\newcommand{\comp}{\circ}
+\newcommand{\const}{\mathrm{const}}
+\newcommand{\dist}[2]{d\pare{#1,#2}}
+\newcommand{\len}{\ell}
+\newcommand{\cara}{Carath\'{e}odory}
+\newcommand{\Gd}{G_\delta}
+\newcommand{\Fs}{F_\sigma}
+\newcommand{\open}[1]{\mathcal{#1}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\maxo}[1]{\text{max}\curb{#1}}
+\newcommand{\mino}[1]{\text{min}\curb{#1}}
+\newcommand{\cinf}{$C^\infty$}
+\newcommand{\cuno}{$C^1$}
+%\newcommand{\Int}{\text{Int}\,}
+\newcommand{\Ext}{\text{Ext}\,}
+\newcommand{\funcf}{\mathcal}
+\newcommand{\DDu}{\overbar{\DD}}
+\newcommand{\DDl}{\underbar{\DD}}
+\newcommand{\Diff}[1]{\mathrm{Diff}_{#1}\,}
+\newcommand{\Av}[1]{\mathrm{Av}_{#1}\,}
+\newcommand{\Lip}[1]{Lipschitz-$#1$}
+% \newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\sgnf}{\mathrm{sgn}\,}
+\newcommand{\eset}{\varnothing}
+\newcommand{\difn}[1]{^{\pare{#1}}}
+\newcommand{\rms}[1]{#1_{\mathrm{rms}}}
+\newcommand{\submax}[1]{#1_{\mathrm{max}}}
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+
+% phy abbr ends
+
+
+
+% font abbr
+
+
+
+% All other abbr to fonts are deprecated
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it} 
+\def\+#1{\csname van@mathfont@#1\endcsname}
+%\def\van@mathfont@v{\vec}
+\def\van@mathfont@v{\boldsymbol}
+\def\van@mathfont@c{\ifthenelse{\equal{\f@family}{Consolas(0)}}{\lstclass}{\mathcal}}
+\def\van@mathfont@s{\mathscr}
+\def\van@mathfont@g{\mathfrak}
+
+\def\van@mathfont@b{\mathbb}
+\def\van@mathfont@p{\mathpzc}
+\def\van@mathfont@m{\varray}
+\def\van@mathfont@u#1{\hat{\+v{#1}}}
+\expandafter\def\csname van@mathfont@`\endcsname #1'{{\ttfamily #1}}
+\expandafter\def\csname van@mathfont@_\endcsname #1_{_{\mathrm{#1}}}
+\expandafter\def\csname van@mathfont@-\endcsname #1{^{#1}}
+\expandafter\def\csname van@mathfont@2\endcsname {^2}
+\expandafter\def\csname van@mathfont@/\endcsname #1/#2/{\frac{#1}{#2}}
+\expandafter\def\csname van@mathfont@<\endcsname #1|#2>{\bra{#1}\ket{#2}}
+\expandafter\def\csname van@mathfont@>\endcsname #1<{\sqrt{#1}}
+\expandafter\def\csname van@mathfont@'\endcsname #1'{\rec{#1}}
+\expandafter\def\csname van@mathfont@!\endcsname #1!{\boxed{#1}}
+\expandafter\def\csname van@mathfont@d\endcsname #1#2{\csname van@math@derivative@#2\endcsname{#1}}
+\expandafter\def\csname van@math@derivative@d\endcsname #1#2{\eddon{#2}{#1}}
+\expandafter\def\csname van@math@derivative@.\endcsname #1{\eddon{}{#1}}
+\expandafter\def\csname van@mathfont@D\endcsname #1#2{\csname van@math@partial@derivative@#2\endcsname{#1}}
+\expandafter\def\csname van@math@partial@derivative@D\endcsname #1#2{\ddelon{#2}{#1}}
+\expandafter\def\csname van@math@partial@derivative@.\endcsname #1{\ddelon{}{#1}}
+
+\expandafter\def\csname van@mathfont@$\endcsname#1${$\displaystyle #1$}
+\expandafter\def\csname van@mathfont@:\endcsname#1{\csname van@multi@#1\endcsname}
+\def\van@multi@c#1#2#3{\multicolumn{#1}{#2}{#3}}
+\def\van@multi@r#1#2{\multirow{#1}{*}{#2}}
+\def\van@multi@m#1#2#3#4{\multicolumn{#2}{#3}{\multirow{#1}{*}{#4}}}
+
+\newcommand{\dbar}{\mathrm{d}\hspace*{-0.15em}\bar{}\hspace*{0.18em}}
+
+\@ifpackageloaded{tex4ht}{%
+\def\rcurs{\mathfrak{r}}
+}{%
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{/Users/zechen/Documents/PrivateAcademic/CommonHead/script_r/ScriptR.pdf}}$}}}
+}
+\@ifpackageloaded{tex4ht}{%
+\def\brcurs{\mathfrak{r}}
+}{%
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{/Users/zechen/Documents/PrivateAcademic/CommonHead/script_r/BoldR.pdf}}$}}}
+}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+% font abbr ends
+
+% theorems
+
+
+% envirs
+
+\newenvironment{cenum}{\begin{enumerate}\itemsep0em}{\end{enumerate}}
+\newenvironment{citem}{\begin{itemize}\itemsep0em}{\end{itemize}}
+\newenvironment{fracarray}{\def\arraystretch{1.5}\left\{ \begin{array}{lr}}{\end{array}\right.}
+
+%envirs ends
+
+% boxes
+
+
+% decls
+
+\DeclareSIUnit\dyne{dynes}
+
+\DeclareMathOperator{\Li}{Li}
+\DeclareMathOperator{\cof}{cof}
+\DeclareMathOperator{\sgn}{sign}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\erfc}{erfc}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\img}{im}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\tor}{tor}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Int}{Int}
+
+% decls ends
+
+\newtheorem{ex}{例}[section]
+\newtheorem{remark}{附注}[section]
+
+
+% 输出日期的给定格式：\cs{ustc@format@date}\marg{format}\marg{date}，
+% 其中格式 \meta{format} 接受三个参数分别对应年、月、日，
+% \meta{date} 是 ISO 格式的日期（yyyy-mm-dd）。
+\newcommand\ustc@format@date[2]{%
+  \edef\ustc@@date{#2}%
+  \def\ustc@@process@date##1-##2-##3\@nil{%
+    #1{##1}{##2}{##3}%
+  }%
+  \expandafter\ustc@@process@date\ustc@@date\@nil
+}
+\newcommand\ustc@date@format@zh[3]{\zhdigits{#1}年\zhnumber{#2}月\zhnumber{#3}日}
+\newcommand\ustc@date@month[1]{%
+  \ifcase\number#1\or
+    January\or February\or March\or April\or May\or June\or
+    July\or August\or September\or October\or November\or December%
+  \fi
+}
+\newcommand\ustc@date@format@en[3]{\ustc@date@month{#2} \number#3, #1}
+\newcommand\ustc@date@zh{\ustc@format@date{\ustc@date@format@zh}{\ustc@date}}
+\newcommand\ustc@date@en{\ustc@format@date{\ustc@date@format@en}{\ustc@date}}
+
+

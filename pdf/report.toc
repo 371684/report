@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}简介}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}研究背景}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}研究思路}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}B介子谱的确定}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}抽样}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Monte Carlo模拟}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}无约束最优化问题}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}结论}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}核修正因子}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}分母的分布}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}计算}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}结论}{6}{subsection.3.3}%
+\contentsline {section}{\numberline {4}结论}{7}{section.4}%
+\contentsline {section}{\numberline {5}下一步工作展望}{7}{section.5}%
+\contentsline {section}{\numberline {6}致谢}{8}{section.6}%

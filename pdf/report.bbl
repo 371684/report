@@ -1,0 +1,50 @@
+\begin{thebibliography}{1}
+
+\bibitem{SI2020135465}
+Fan Si, Xiao-Long Chen, Long Zhou, Yi-Fei Zhang, Sheng-Hui Zhang, Xin-Yue Ju,
+  Xiu-Jun Li, Xin Dong, and Nu~Xu.
+\newblock Charm and beauty isolation from heavy flavor decay electrons in au+au
+  collisions at snn = 200 gev at rhic.
+\newblock {\em Physics Letters B}, 805:135465, 2020.
+
+\bibitem{cacciari2012theoretical}
+Matteo Cacciari, Stefano Frixione, Nicolas Houdeau, Michelangelo~L Mangano,
+  Paolo Nason, and Giovanni Ridolfi.
+\newblock Theoretical predictions for charm and bottom production at the lhc.
+\newblock {\em Journal of High Energy Physics}, 2012(10):1--24, 2012.
+
+\bibitem{Tang:2020ame}
+Ze-Bo Tang, Wang-Mei Zha, and Yi-Fei Zhang.
+\newblock {An experimental review of open heavy flavor and quarkonium
+  production at RHIC}.
+\newblock {\em Nucl. Sci. Tech.}, 31(8):81, 2020.
+
+\bibitem{tsallis1999nonextensive}
+Constantino Tsallis.
+\newblock Nonextensive statistics: theoretical, experimental and computational
+  evidences and connections.
+\newblock {\em Brazilian Journal of Physics}, 29(1):1--35, 1999.
+
+\bibitem{explaination}
+实际上$y$的分布和$\phi$的分布并不会影响我们感兴趣的系统的动力学过程，只是为了模拟实验情况，对探测到的粒子的$y$进行筛选。.
+
+\bibitem{Sj_strand_2015}
+Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
+  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
+  Rasmussen, and Peter~Z. Skands.
+\newblock An introduction to pythia 8.2.
+\newblock {\em Computer Physics Communications}, 191:159–177, Jun 2015.
+
+\bibitem{Zhang:2008gb}
+Yifei Zhang.
+\newblock {\em {Measurement of charm production cross-section and leptons from
+  its semileptonic decay at RHIC}}.
+\newblock PhD thesis, Hefei, CUST, 2007.
+
+\bibitem{Aidala:2019hib}
+C.~Aidala et~al.
+\newblock {Measurement of charm and bottom production from semileptonic hadron
+  decays in $p+p$ collisions at $\sqrt{s_{NN}}=200$ GeV}.
+\newblock {\em Phys. Rev. D}, 99(9):092003, 2019.
+
+\end{thebibliography}
